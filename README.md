@@ -1,4 +1,4 @@
-# [sassv/wechat](https://github.com/henry-proj/docker-baidunetdisk)
+# [sassv/baidunetdisk](https://github.com/henry-proj/docker-baidunetdisk)
 可以在网页访问的百度网盘，使用的Linux原生版本，基础镜像来自于[LinuxServer.io](https://www.linuxserver.io/)。
 
 ## 支持的架构
@@ -81,7 +81,7 @@ services:
 ### docker cli
 ```yaml
 docker run -d \
-  --name=wechat \
+  --name=baidunetdisk \
   --security-opt seccomp=unconfined `#optional` \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -91,11 +91,11 @@ docker run -d \
   -e DRINODE=/dev/dri/renderD128 \
   -p 3000:3000 \
   -p 3001:3001 \
-  -v /data/docker-data/wechat/data:/config \
+  -v /data/docker-data/baidunetdisk/data:/config \
   --device /dev/dri:/dev/dri \
   --shm-size="4gb" \
   --restart unless-stopped \
-  sassv/wechat:latest
+  sassv/baidunetdisk:latest
 ```
 ## 参数
 容器是通过在运行时传递的参数（如上述所示）进行配置的。这些参数用冒号分隔，并分别表示`< external >:< internal >`。例如，`-p 8080:80` 将使容器内的80端口可以从容器外部的主机 IP 的8080端口上进行访问。
