@@ -1,5 +1,6 @@
 # [sassv/baidunetdisk](https://github.com/henry-proj/docker-baidunetdisk)
 可以在网页访问的百度网盘，使用的Linux原生版本，基础镜像来自于[LinuxServer.io](https://www.linuxserver.io/)。
+![view](./img/view.png)
 
 ## 支持的架构
 该镜像支持的架构有：
@@ -86,8 +87,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
-  -e DOCKER_MODS=linuxserver/mods:universal-package-install
-  -e INSTALL_PACKAGES=fonts-noto-cjk
+  -e DOCKER_MODS=linuxserver/mods:universal-package-install \
+  -e INSTALL_PACKAGES=fonts-noto-cjk \
   -e DRINODE=/dev/dri/renderD128 \
   -p 3000:3000 \
   -p 3001:3001 \
