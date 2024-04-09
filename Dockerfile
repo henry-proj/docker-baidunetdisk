@@ -9,13 +9,12 @@ RUN \
     /kclient/public/icon.png \
     https://nd-static.bdstatic.com/m-static/wp-brand/img/logo-pan.6af52c5e.png && \
   echo "**** download packages ****" && \
-  curl -o /tmp/baidunetdisk_linux_2.0.1.deb \
-    https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/baidunetdisk_linux_2.0.1.deb && \
+  curl -o /tmp/baidunetdisk_4.17.7_amd64.deb \
+    https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb && \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    /tmp/baidunetdisk_linux_2.0.1.deb \
-    libgtk-3-0 && \
+    /tmp/baidunetdisk_4.17.7_amd64.deb && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
